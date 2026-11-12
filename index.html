@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bronica Cobia | Hair Stylist & Nail Artist in Red Springs, NC 28377</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Playfair Display for elegant beauty aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        roseGold: {
+                            50: '#fdf2f4',
+                            100: '#fce7eb',
+                            400: '#e11d48',
+                            500: '#be123c',
+                            600: '#9f1239',
+                            900: '#4c0519',
+                        },
+                        neutralDark: {
+                            950: '#0f0e0e',
+                            900: '#181717',
+                            800: '#262424',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-neutralDark-950 text-stone-100 font-sans antialiased selection:bg-rose-500 selection:text-white overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-neutralDark-950/85 backdrop-blur-md border-b border-stone-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-full bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 group-hover:bg-rose-500 group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl font-bold tracking-wide text-white block leading-none">Bronica Cobia</span>
+                        <span class="text-[11px] uppercase tracking-widest text-rose-400 font-medium">Hair & Nail Artistry • NC 28377</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-7">
+                    <button onclick="navigateTo('home')" class="nav-link text-sm font-medium text-rose-400 transition-colors" data-page="home">Home</button>
+                    <button onclick="navigateTo('about')" class="nav-link text-sm font-medium text-stone-300 hover:text-rose-400 transition-colors" data-page="about">About</button>
+                    <a href="#services" onclick="navigateTo('home')" class="text-sm font-medium text-stone-300 hover:text-rose-400 transition-colors">Services</a>
+                    <a href="#gallery" onclick="navigateTo('home')" class="text-sm font-medium text-stone-300 hover:text-rose-400 transition-colors">Gallery</a>
+                    <button onclick="navigateTo('contact')" class="nav-link text-sm font-medium text-stone-300 hover:text-rose-400 transition-colors" data-page="contact">Contact</button>
+                </nav>
+
+                <!-- Desktop CTA Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="tel:+12677508616" class="text-sm font-medium text-stone-300 hover:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-rose-400 text-xs"></i>
+                        +1 267-750-8616
+                    </a>
+                    <button onclick="navigateTo('contact')" class="px-5 py-2.5 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-semibold text-sm transition-all shadow-lg shadow-rose-900/30">
+                        Book Appointment
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-3 rounded-xl text-stone-300 hover:text-white hover:bg-stone-800/70 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutralDark-900 border-b border-stone-800 px-4 pt-2 pb-6 space-y-2">
+            <button onclick="navigateTo('home')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-rose-400">Home</button>
+            <button onclick="navigateTo('about')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-rose-400">About Bronica</button>
+            <a href="#services" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-rose-400">Hair & Nail Services</a>
+            <a href="#gallery" onclick="navigateTo('home')" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-rose-400">Style Gallery</a>
+            <button onclick="navigateTo('contact')" class="w-full text-left block px-4 py-3 rounded-xl text-base font-medium text-stone-200 hover:bg-stone-800 hover:text-rose-400">Contact & Location</button>
+            <div class="pt-3 border-t border-stone-800 flex flex-col gap-3">
+                <a href="tel:+12677508616" class="w-full py-3 rounded-xl bg-stone-800 text-center text-stone-200 font-medium flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone text-rose-400"></i> Call +1 267-750-8616
+                </a>
+                <button onclick="navigateTo('contact')" class="w-full py-3 rounded-xl bg-rose-600 text-white text-center font-bold shadow-lg">
+                    Book Appointment
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN HOME VIEW -->
+    <main id="page-home" class="page-view">
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden">
+        <!-- Ambient Rose Glow Background -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-96 bg-rose-600/15 blur-[130px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs sm:text-sm font-medium mb-6">
+                        <span class="w-2 h-2 rounded-full bg-rose-400 animate-pulse"></span>
+                        Professional Hair Styling & Nail Art in Red Springs, NC 28377
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Elevate Your Look with Expert <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-300 via-rose-400 to-rose-600">Hair & Nail Artistry</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-stone-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        Hello, I'm <strong class="text-white font-semibold">Bronica Cobia</strong>. Dedicated to bringing out your best aesthetic with precision haircuts, vibrant coloring, custom manicures, and stunning nail designs right here in Red Springs, NC 28377.
+                    </p>
+
+                    <!-- Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+                        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-base transition-all shadow-xl shadow-rose-900/30 flex items-center justify-center gap-2">
+                            <span>Explore Services</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="tel:+12677508616" class="w-full sm:w-auto px-8 py-4 rounded-full bg-neutralDark-900 hover:bg-neutralDark-800 border border-stone-700 text-white font-semibold text-base transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-rose-400"></i>
+                            <span>+1 267-750-8616</span>
+                        </a>
+                    </div>
+
+                    <!-- Quick Key Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-800/80 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-xl sm:text-2xl font-bold text-white">Hair & Nails</p>
+                            <p class="text-xs text-stone-400 mt-0.5">Specialized Artistry</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-bold text-rose-400">28377</p>
+                            <p class="text-xs text-stone-400 mt-0.5">Red Springs, NC</p>
+                        </div>
+                        <div>
+                            <p class="text-xl sm:text-2xl font-bold text-white">100%</p>
+                            <p class="text-xs text-stone-400 mt-0.5">Personalized Care</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Card Column -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-3xl overflow-hidden bg-neutralDark-900 border border-stone-800 shadow-2xl group">
+                        <img 
+                            src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=900&q=80" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/800x950/1c1917/e11d48?text=Bronica+Cobia+Hair+Stylist';"
+                            alt="Bronica Cobia Hair and Nail Studio" 
+                            class="w-full h-[420px] sm:h-[480px] object-cover object-center group-hover:scale-105 transition-transform duration-700 opacity-90"
+                        >
+                        <!-- Gradient Overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutralDark-950 via-neutralDark-950/40 to-transparent"></div>
+                        
+                        <!-- Floating Info Badge inside Card -->
+                        <div class="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-neutralDark-900/90 backdrop-blur-md border border-stone-700/70">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs uppercase tracking-wider text-rose-400 font-semibold">Licensed Professional</p>
+                                    <h2 class="text-lg font-bold text-white">Bronica Cobia</h2>
+                                    <p class="text-xs text-stone-400 mt-0.5">315 Mustang Dr, Red Springs, NC 28377</p>
+                                </div>
+                                <div class="w-12 h-12 rounded-2xl bg-rose-500/20 border border-rose-500/40 flex items-center justify-center text-rose-400">
+                                    <i class="fa-solid fa-scissors text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Local Commitment Section -->
+    <section id="about" class="py-20 bg-neutralDark-900/50 border-y border-stone-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-rose-400">About Bronica</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Dedicated Beauty & Nail Care in Red Springs</h2>
+                <p class="text-stone-300 text-base sm:text-lg leading-relaxed">
+                    Conveniently located on <strong class="text-white">Mustang Dr</strong>, I provide premium hair styling and bespoke nail artistry exclusively for the <strong class="text-white">NC 28377</strong> community. My mission is to make every client feel pampered, confident, and beautifully renewed.
+                </p>
+            </div>
+
+            <!-- 3 Feature Pillars -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-7 rounded-3xl bg-neutralDark-900 border border-stone-800 hover:border-rose-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-5 text-xl">
+                        <i class="fa-solid fa-paintbrush"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Custom Hair Styling</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Precision cuts, custom coloring, balayage, smoothing treatments, and professional blowouts tailored to your personal style.
+                    </p>
+                </div>
+
+                <div class="p-7 rounded-3xl bg-neutralDark-900 border border-stone-800 hover:border-rose-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-5 text-xl">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Expert Nail Artistry</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Luxurious manicures, long-lasting gel overlays, structured builder gel, and intricate hand-painted nail art designs.
+                    </p>
+                </div>
+
+                <div class="p-7 rounded-3xl bg-neutralDark-900 border border-stone-800 hover:border-rose-500/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-400 flex items-center justify-center mb-5 text-xl">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Local NC 28377 Focus</h3>
+                    <p class="text-stone-400 text-sm leading-relaxed">
+                        Proudly serving Red Springs clients with a welcoming, relaxing studio atmosphere and uncompromising attention to detail.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Pricing Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-rose-400">Menu of Services</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Hair & Nail Services</h2>
+                <p class="text-stone-400 mt-2 text-sm sm:text-base">Professional treatments designed to elevate your everyday look.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Hair Services Card -->
+                <div class="p-8 rounded-3xl bg-neutralDark-900 border border-stone-800 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-scissors"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Hair Styling & Care</h3>
+                                <p class="text-xs text-rose-400">Cuts, Color & Treatments</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-sm text-stone-300 mb-8">
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Women's Cut & Style</span>
+                                <span class="font-bold text-white">From $55</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Full Color & Highlights</span>
+                                <span class="font-bold text-white">From $110</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Balayage / Ombre</span>
+                                <span class="font-bold text-white">From $135</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Shampoo & Professional Blowout</span>
+                                <span class="font-bold text-white">From $45</span>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <span>Deep Conditioning Treatment</span>
+                                <span class="font-bold text-white">From $35</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="navigateTo('contact')" class="w-full py-3.5 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-center text-sm transition-colors">
+                        Book Hair Appointment
+                    </button>
+                </div>
+
+                <!-- Nail Services Card -->
+                <div class="p-8 rounded-3xl bg-neutralDark-900 border border-stone-800 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-400 flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-hand-sparkles"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">Nail Artistry & Care</h3>
+                                <p class="text-xs text-rose-400">Manicures & Custom Art</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4 text-sm text-stone-300 mb-8">
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Classic Manicure</span>
+                                <span class="font-bold text-white">From $35</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Gel / Shellac Overlay</span>
+                                <span class="font-bold text-white">From $50</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Structured Builder Gel (BIAB)</span>
+                                <span class="font-bold text-white">From $65</span>
+                            </li>
+                            <li class="flex items-center justify-between pb-3 border-b border-stone-800">
+                                <span>Custom Nail Art (per nail / set)</span>
+                                <span class="font-bold text-white">From $15+</span>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <span>Spa Pedicure</span>
+                                <span class="font-bold text-white">From $55</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="navigateTo('contact')" class="w-full py-3.5 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-center text-sm transition-colors">
+                        Book Nail Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-neutralDark-900/50 border-y border-stone-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-rose-400">Portfolio</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2">Recent Styles & Nail Art</h2>
+                <p class="text-stone-400 mt-2 text-sm">A glimpse into recent hair styling and custom nail designs created in Red Springs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="rounded-3xl overflow-hidden border border-stone-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=700&q=80" onerror="this.onerror=null; this.src='https://placehold.co/600x600/1c1917/e11d48?text=Hair+Styling';" alt="Hair Styling" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutralDark-950 via-transparent to-transparent opacity-80 flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-rose-400 font-semibold uppercase">Hair Styling</span>
+                            <h3 class="text-white font-bold text-lg">Custom Color & Blowout</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl overflow-hidden border border-stone-800 group relative">
+                    <img src="https://images.unsplash.com/photo-1632345031435-8727f6c97d34?auto=format&fit=crop&w=700&q=80" onerror="this.onerror=null; this.src='https://placehold.co/600x600/1c1917/e11d48?text=Nail+Art';" alt="Nail Art" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutralDark-950 via-transparent to-transparent opacity-80 flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-rose-400 font-semibold uppercase">Nail Artistry</span>
+                            <h3 class="text-white font-bold text-lg">Gel Manicure & Custom Design</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-3xl overflow-hidden border border-stone-800 group relative sm:col-span-2 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=700&q=80" onerror="this.onerror=null; this.src='https://placehold.co/600x600/1c1917/e11d48?text=Hair+Cut';" alt="Hair Cut" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-neutralDark-950 via-transparent to-transparent opacity-80 flex items-end p-6">
+                        <div>
+                            <span class="text-xs text-rose-400 font-semibold uppercase">Precision Cuts</span>
+                            <h3 class="text-white font-bold text-lg">Textured Layers & Styling</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Contact Section -->
+    <section id="booking" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Contact & Service Area Details -->
+                <div id="contact" class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-rose-400">Direct Contact</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-2 mb-4">Book with Bronica</h2>
+                        <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+                            Ready for a fresh hairstyle or a gorgeous new set of nails? Call directly or send a booking request below. Providing professional beauty services in <strong class="text-white">Red Springs, NC 28377</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Contact Cards -->
+                    <div class="space-y-4">
+                        <!-- Phone -->
+                        <div class="p-5 rounded-2xl bg-neutralDark-900 border border-stone-800 flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-rose-500/15 text-rose-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-stone-400">Direct Phone / Text</p>
+                                    <a href="tel:+12677508616" class="text-base sm:text-lg font-bold text-white hover:text-rose-400 transition-colors">
+                                        +1 267-750-8616
+                                    </a>
+                                </div>
+                            </div>
+                            <button onclick="copyPhoneNumber()" class="p-3 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-300 hover:text-white text-xs font-medium transition-colors" title="Copy Phone Number">
+                                <i class="fa-regular fa-copy"></i> Copy
+                            </button>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="p-5 rounded-2xl bg-neutralDark-900 border border-stone-800 flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-rose-500/15 text-rose-400 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-map-pin text-lg"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-stone-400">Studio Location</p>
+                                <p class="text-base font-bold text-white mt-0.5">Bronica Cobia</p>
+                                <p class="text-sm text-stone-300">315 Mustang Dr</p>
+                                <p class="text-sm text-stone-300">Red Springs, NC 28377</p>
+                                <p class="text-xs text-rose-400 font-semibold mt-1 uppercase tracking-wider">UNITED STATES</p>
+                            </div>
+                        </div>
+
+                        <!-- Strict Service Area Notice -->
+                        <div class="p-5 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-3.5">
+                            <i class="fa-solid fa-circle-info text-rose-400 mt-1"></i>
+                            <div class="text-xs sm:text-sm text-stone-200 leading-relaxed">
+                                <strong class="text-rose-300">Service Area Policy:</strong> Hair and nail services are provided exclusively for clients in <strong class="text-white">NC 28377 (Red Springs)</strong>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Booking Inquiry Form -->
+                <div class="lg:col-span-7">
+                    <div class="p-6 sm:p-10 rounded-3xl bg-neutralDark-900 border border-stone-800 shadow-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-2">Appointment Request</h3>
+                        <p class="text-stone-400 text-sm mb-6">Fill out your service preferences in Red Springs (28377) and I will confirm shortly.</p>
+
+                        <form id="booking-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="client-name" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Your Name *</label>
+                                    <input type="text" id="client-name" required placeholder="e.g., Jessica Miller" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-rose-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="client-phone" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Phone Number *</label>
+                                    <input type="tel" id="client-phone" required placeholder="(910) 555-0192" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-rose-500 transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="preferred-date" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Preferred Date *</label>
+                                    <input type="date" id="preferred-date" required class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500 transition-colors">
+                                </div>
+                                <div>
+                                    <label for="event-zip" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">ZIP Code *</label>
+                                    <input type="text" id="event-zip" value="28377" required maxlength="5" placeholder="28377" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500 transition-colors">
+                                    <p id="zip-warning" class="hidden text-xs text-rose-400 mt-1.5">
+                                        <i class="fa-solid fa-triangle-exclamation mr-1"></i> Services provided in NC 28377 only.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="service-type" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Service Needed</label>
+                                    <select id="service-type" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500 transition-colors">
+                                        <option value="Hair Cut & Styling">Hair Cut & Styling</option>
+                                        <option value="Hair Coloring / Highlights">Hair Coloring / Highlights</option>
+                                        <option value="Manicure / Gel Overlay">Manicure / Gel Overlay</option>
+                                        <option value="Custom Nail Art Set">Custom Nail Art Set</option>
+                                        <option value="Hair & Nails Combo">Hair & Nails Combo</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="preferred-time" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Preferred Time</label>
+                                    <select id="preferred-time" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500 transition-colors">
+                                        <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
+                                        <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
+                                        <option value="Evening (4 PM - 7 PM)">Evening (4 PM - 7 PM)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="service-notes" class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Style Preferences & Notes</label>
+                                <textarea id="service-notes" rows="3" placeholder="Describe the hair length, color goals, or nail design inspiration you have in mind..." class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white placeholder-stone-600 focus:outline-none focus:border-rose-500 transition-colors"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-base transition-all shadow-lg shadow-rose-900/30 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Submit Appointment Request</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- DEDICATED ABOUT PAGE VIEW -->
+    <section id="page-about" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10">
+                <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-rose-400 hover:text-rose-300 font-medium mb-6">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </button>
+                <span class="block text-xs font-bold uppercase tracking-widest text-rose-400">Professional Background</span>
+                <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2 mb-6">About Bronica Cobia</h1>
+                <p class="text-lg text-stone-300 leading-relaxed">
+                    Based on Mustang Dr in <strong class="text-white">Red Springs, NC 28377</strong>, I am a passionate, licensed hair stylist and nail artist dedicated to helping clients look and feel their absolute best.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
+                <div class="lg:col-span-5">
+                    <div class="rounded-3xl overflow-hidden border border-stone-800 bg-neutralDark-900 shadow-xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" 
+                            onerror="this.onerror=null; this.src='https://placehold.co/700x800/1c1917/e11d48?text=Bronica+Cobia';"
+                            alt="Bronica Cobia Studio" 
+                            class="w-full h-96 object-cover"
+                        >
+                        <div class="p-6">
+                            <h2 class="text-lg font-bold text-white">Hair Stylist & Nail Artist</h2>
+                            <p class="text-sm text-stone-400 mt-1">315 Mustang Dr, Red Springs, NC 28377</p>
+                            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between text-xs">
+                                <span class="text-stone-400">Direct Phone</span>
+                                <a href="tel:+12677508616" class="text-rose-400 font-bold hover:underline">+1 267-750-8616</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6 text-stone-300 leading-relaxed">
+                    <div class="p-7 rounded-3xl bg-neutralDark-900 border border-stone-800 space-y-4">
+                        <h3 class="text-xl font-bold text-white">Artistry Rooted in Red Springs</h3>
+                        <p class="text-sm sm:text-base">
+                            I believe that personal care is both an art form and a relaxing ritual. By specializing in both hair styling and custom nail artistry under one roof in <strong class="text-white">NC 28377</strong>, I offer a cohesive, high-end beauty experience for my clients.
+                        </p>
+                        <p class="text-sm sm:text-base">
+                            Whether you need a complete hair transformation with dimensional color or immaculate, hand-painted gel nails for a special occasion, every detail is crafted with precision, sanitation, and care.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-6 rounded-2xl bg-neutralDark-900/70 border border-stone-800">
+                            <i class="fa-solid fa-scissors text-rose-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Hair Expertise</h4>
+                            <p class="text-xs text-stone-400 leading-relaxed">Precision cuts, dimensional coloring, balayage highlights, nourishing treatments, and sleek blowouts.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-neutralDark-900/70 border border-stone-800">
+                            <i class="fa-solid fa-hand-sparkles text-rose-400 text-xl mb-3"></i>
+                            <h4 class="font-bold text-white mb-1">Nail Mastery</h4>
+                            <p class="text-xs text-stone-400 leading-relaxed">Long-lasting gel overlays, structured builder gel manicures, luxury pedicures, and custom nail art.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="navigateTo('contact')" class="px-8 py-4 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm transition-all shadow-lg">
+                            Book Your Session in Red Springs
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED CONTACT PAGE VIEW -->
+    <section id="page-contact" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-rose-400 hover:text-rose-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-rose-400">Get In Touch</span>
+            <h1 class="font-serif text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">Contact Bronica Cobia</h1>
+            <p class="text-stone-300 text-base sm:text-lg max-w-2xl mb-12">
+                Have questions about hair treatments, nail art designs, or availability in <strong class="text-white">Red Springs, NC 28377</strong>? Reach out directly by phone or send a message below.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <!-- Address Card -->
+                <div class="p-7 rounded-3xl bg-neutralDark-900 border border-stone-800">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Studio Address</h3>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        Bronica Cobia<br>
+                        315 Mustang Dr<br>
+                        Red Springs, NC 28377<br>
+                        UNITED STATES
+                    </p>
+                </div>
+
+                <!-- Phone Card -->
+                <div class="p-7 rounded-3xl bg-neutralDark-900 border border-stone-800 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-400 flex items-center justify-center mb-4 text-xl">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2">Phone & Text</h3>
+                        <a href="tel:+12677508616" class="text-lg font-bold text-rose-400 hover:underline block mb-1">
+                            +1 267-750-8616
+                        </a>
+                        <p class="text-xs text-stone-400">Available daily 9:00 AM – 7:00 PM EST</p>
+                    </div>
+                    <button onclick="copyPhoneNumber()" class="mt-4 w-full py-2.5 rounded-xl bg-stone-800 hover:bg-stone-700 text-xs font-semibold text-white transition-colors">
+                        <i class="fa-regular fa-copy mr-1"></i> Copy Phone Number
+                    </button>
+                </div>
+
+                <!-- Specialty & Area Card -->
+                <div class="p-7 rounded-3xl bg-neutralDark-900 border border-stone-800">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-500/15 text-rose-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Specialties & Zone</h3>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        <strong class="text-white">Services:</strong> Hair & Nail Art<br>
+                        <strong class="text-white">Service Area:</strong> NC 28377 Only<br>
+                        <span class="text-xs text-stone-400 block mt-2">Appointments booked in advance.</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Direct Contact Message Form -->
+            <div class="p-8 sm:p-10 rounded-3xl bg-neutralDark-900 border border-stone-800">
+                <h2 class="text-2xl font-bold text-white mb-2">Send a Direct Message</h2>
+                <p class="text-sm text-stone-400 mb-6">For hair and nail services in NC 28377.</p>
+                <form id="contact-page-form" class="space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Full Name *</label>
+                            <input type="text" required placeholder="Your Name" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Phone or Email *</label>
+                            <input type="text" required placeholder="+1 (910) 000-0000" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">ZIP Code (28377 Only) *</label>
+                            <input type="text" id="contact-zip" value="28377" maxlength="5" required class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Service Interest</label>
+                            <input type="text" placeholder="Hair, Nails, or Both" class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-stone-400 mb-2">Message / Details *</label>
+                        <textarea rows="4" required placeholder="Tell Bronica about your desired hair or nail styling needs..." class="w-full px-4 py-3.5 rounded-xl bg-neutralDark-950 border border-stone-800 text-white focus:outline-none focus:border-rose-500"></textarea>
+                    </div>
+                    <button type="submit" class="px-8 py-4 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm transition-all shadow-lg">
+                        Send Message to Bronica
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED PRIVACY POLICY PAGE VIEW -->
+    <section id="page-privacy" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-rose-400 hover:text-rose-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-rose-400">Legal Information</span>
+            <h1 class="font-serif text-4xl font-bold text-white mt-2 mb-2">Privacy Policy</h1>
+            <p class="text-xs text-stone-400 mb-8">Last Updated: November 2026 • Bronica Cobia Hair & Nail Artistry (Red Springs, NC 28377)</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-neutralDark-900 border border-stone-800 space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Information We Collect</h2>
+                    <p>
+                        When you submit an appointment inquiry or contact request through this website, Bronica Cobia collects only the personal details you voluntarily provide, including your name, phone number, email address, preferred appointment date, and ZIP code (to verify service eligibility within <strong class="text-white">Red Springs, NC 28377</strong>).
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. How We Use Your Information</h2>
+                    <p>Your information is used strictly for:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-stone-300">
+                        <li>Confirming whether your service request is located within our NC 28377 service area.</li>
+                        <li>Communicating appointment availability, styling consultations, and service quotes.</li>
+                        <li>Coordinating studio scheduling and arrival logistics for your hair or nail appointment.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Data Sharing & Security</h2>
+                    <p>
+                        We respect your privacy. Bronica Cobia never sells, rents, or trades your contact details to third-party marketers or external agencies. Your details remain confidential and are retained only as needed to fulfill your styling appointments.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Contact Regarding Privacy</h2>
+                    <p>
+                        If you wish to update or delete your appointment details, please contact Bronica Cobia directly:<br>
+                        <strong class="text-white">Address:</strong> 315 Mustang Dr, Red Springs, NC 28377, UNITED STATES<br>
+                        <strong class="text-white">Phone:</strong> <a href="tel:+12677508616" class="text-rose-400 hover:underline">+1 267-750-8616</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEDICATED TERMS OF SERVICE PAGE VIEW -->
+    <section id="page-terms" class="page-view hidden pt-32 pb-24 min-h-screen">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <button onclick="navigateTo('home')" class="inline-flex items-center gap-2 text-sm text-rose-400 hover:text-rose-300 font-medium mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Back to Home
+            </button>
+            <span class="block text-xs font-bold uppercase tracking-widest text-rose-400">Booking Guidelines</span>
+            <h1 class="font-serif text-4xl font-bold text-white mt-2 mb-2">Terms of Service</h1>
+            <p class="text-xs text-stone-400 mb-8">Effective Date: November 2026 • Bronica Cobia Hair & Nail Artistry</p>
+
+            <div class="p-8 sm:p-10 rounded-3xl bg-neutralDark-900 border border-stone-800 space-y-6 text-stone-300 text-sm sm:text-base leading-relaxed">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">1. Geographic Service Limitation (NC 28377 Only)</h2>
+                    <p>
+                        All hair styling and nail art services are provided exclusively within the service area of <strong class="text-white">Red Springs, NC 28377</strong>. Inquiries for locations outside ZIP code 28377 cannot be accommodated.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">2. Appointments & Pricing</h2>
+                    <p>
+                        Service prices vary based on hair length, coloration complexity, and nail art intricacy. Final quotes are confirmed prior to beginning any treatment.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">3. Studio Policies & Rescheduling</h2>
+                    <p>
+                        Please notify Bronica Cobia at <a href="tel:+12677508616" class="text-rose-400 hover:underline">+1 267-750-8616</a> at least 24 hours in advance if you need to reschedule or cancel your appointment.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-2">4. Business Information</h2>
+                    <p>
+                        <strong class="text-white">Bronica Cobia</strong><br>
+                        315 Mustang Dr, Red Springs, NC 28377, UNITED STATES<br>
+                        Phone: +1 267-750-8616
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutralDark-950 border-t border-stone-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-stone-900">
+                <div class="text-center md:text-left">
+                    <span class="font-serif text-xl font-bold text-white block">Bronica Cobia</span>
+                    <p class="text-xs text-stone-400 mt-1">
+                        315 Mustang Dr, Red Springs, NC 28377, UNITED STATES • <a href="tel:+12677508616" class="text-rose-400 hover:underline">+1 267-750-8616</a>
+                    </p>
+                </div>
+
+                <!-- Footer Page Links -->
+                <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-stone-400">
+                    <button onclick="navigateTo('home')" class="hover:text-rose-400 transition-colors">Home</button>
+                    <button onclick="navigateTo('about')" class="hover:text-rose-400 transition-colors">About</button>
+                    <button onclick="navigateTo('contact')" class="hover:text-rose-400 transition-colors">Contact</button>
+                    <button onclick="navigateTo('privacy')" class="hover:text-rose-400 transition-colors">Privacy Policy</button>
+                    <button onclick="navigateTo('terms')" class="hover:text-rose-400 transition-colors">Terms of Service</button>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500 text-center sm:text-left">
+                <p>Hair Stylist & Nail Artist Providing Services Exclusively in NC 28377</p>
+                <p>&copy; <span id="current-year"></span> Bronica Cobia Artistry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Notification Modal (Replaces alert) -->
+    <div id="notification-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-neutralDark-950/80 backdrop-blur-sm">
+        <div class="max-w-md w-full p-6 sm:p-8 rounded-3xl bg-neutralDark-900 border border-stone-700 shadow-2xl text-center transform transition-all">
+            <div id="modal-icon-container" class="w-14 h-14 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i id="modal-icon" class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="modal-title" class="text-xl font-bold text-white mb-2">Appointment Request Received!</h3>
+            <p id="modal-message" class="text-sm text-stone-300 leading-relaxed mb-6">
+                Thank you for reaching out! Bronica Cobia will review your Red Springs appointment details and call you shortly.
+            </p>
+            <button onclick="closeModal()" class="w-full py-3 rounded-full bg-rose-600 hover:bg-rose-500 text-white font-bold text-sm transition-colors">
+                Got It
+            </button>
+        </div>
+    </div>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Set dynamic current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Single-Page Multi-View Navigation Router (Home, About, Contact, Privacy, Terms)
+        function navigateTo(pageName) {
+            const views = document.querySelectorAll('.page-view');
+            views.forEach(view => view.classList.add('hidden'));
+
+            const targetView = document.getElementById(`page-${pageName}`);
+            if (targetView) {
+                targetView.classList.remove('hidden');
+            }
+
+            // Update active state on desktop nav buttons
+            document.querySelectorAll('.nav-link').forEach(btn => {
+                if (btn.dataset.page === pageName) {
+                    btn.classList.remove('text-stone-300');
+                    btn.classList.add('text-rose-400');
+                } else {
+                    btn.classList.remove('text-rose-400');
+                    btn.classList.add('text-stone-300');
+                }
+            });
+
+            // Close mobile menu if open
+            const mobileMenuEl = document.getElementById('mobile-menu');
+            if (mobileMenuEl && !mobileMenuEl.classList.contains('hidden')) {
+                mobileMenuEl.classList.add('hidden');
+            }
+
+            // Smooth scroll to top when switching views
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Live ZIP Code Validation (NC 28377 Only)
+        const zipInput = document.getElementById('event-zip');
+        const zipWarning = document.getElementById('zip-warning');
+
+        zipInput.addEventListener('input', () => {
+            const val = zipInput.value.trim();
+            if (val.length === 5 && val !== '28377') {
+                zipWarning.classList.remove('hidden');
+                zipInput.classList.add('border-rose-500');
+            } else {
+                zipWarning.classList.add('hidden');
+                zipInput.classList.remove('border-rose-500');
+            }
+        });
+
+        // Copy Phone Number using fallback execCommand for iframe compatibility
+        function copyPhoneNumber() {
+            const phoneText = '+1 267-750-8616';
+            const tempInput = document.createElement('textarea');
+            tempInput.value = phoneText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showModal(
+                    'Phone Number Copied',
+                    'Bronica Cobia\'s number (+1 267-750-8616) has been copied to your clipboard.',
+                    'fa-copy',
+                    false
+                );
+            } catch (err) {
+                showModal(
+                    'Direct Phone Number',
+                    'Call or text Bronica Cobia directly at +1 267-750-8616.',
+                    'fa-phone',
+                    false
+                );
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Custom Modal Helpers
+        const modal = document.getElementById('notification-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalIcon = document.getElementById('modal-icon');
+        const modalIconContainer = document.getElementById('modal-icon-container');
+
+        function showModal(title, message, iconClass = 'fa-check', isWarning = false) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modalIcon.className = `fa-solid ${iconClass}`;
+            
+            if (isWarning) {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            } else {
+                modalIconContainer.className = 'w-14 h-14 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center mx-auto mb-4 text-2xl';
+            }
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Booking Form Submission Handler
+        const bookingForm = document.getElementById('booking-form');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('client-name').value.trim();
+            const zip = document.getElementById('event-zip').value.trim();
+            const service = document.getElementById('service-type').value;
+
+            // Enforce NC 28377 Service Area Rule
+            if (zip !== '28377') {
+                showModal(
+                    'Outside Service Area (NC 28377 Only)',
+                    `Hi ${name}, Bronica Cobia exclusively provides hair and nail services within Red Springs, NC 28377. Please update your ZIP code to 28377.`,
+                    'fa-location-crosshairs',
+                    true
+                );
+                return;
+            }
+
+            showModal(
+                'Appointment Request Sent!',
+                `Thank you, ${name}! Your request for ${service} in Red Springs (28377) is received. Bronica will contact you shortly—or call +1 267-750-8616 for immediate confirmation.`,
+                'fa-scissors',
+                false
+            );
+            
+            bookingForm.reset();
+            document.getElementById('event-zip').value = '28377';
+        });
+
+        // Contact Page Form Submission Handler (Enforces NC 28377)
+        const contactPageForm = document.getElementById('contact-page-form');
+        if (contactPageForm) {
+            contactPageForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const zipVal = document.getElementById('contact-zip').value.trim();
+                if (zipVal !== '28377') {
+                    showModal(
+                        'Outside Service Area (NC 28377 Only)',
+                        'Bronica Cobia exclusively serves clients located within Red Springs, NC 28377. Please verify your ZIP code is 28377.',
+                        'fa-location-crosshairs',
+                        true
+                    );
+                    return;
+                }
+                showModal(
+                    'Message Sent to Bronica!',
+                    'Thank you for reaching out. Expect a reply soon—or call +1 267-750-8616 directly.',
+                    'fa-envelope-circle-check',
+                    false
+                );
+                contactPageForm.reset();
+                document.getElementById('contact-zip').value = '28377';
+            });
+        }
+    </script>
+</body>
+</html>
